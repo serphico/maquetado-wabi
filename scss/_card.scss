@@ -1,0 +1,147 @@
+.itemsCard {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $mediumDivice) {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    margin: 1rem auto;
+    padding: 1rem;
+    box-shadow: $dropShadow;
+    border-radius: $radius;
+    @media (min-width: $mediumDivice) {
+      width: 23%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    small {
+      width: 21%;
+      text-align: center;
+      font-size: $fontSizeMedium;
+      background-color: $gris;
+
+      @media (min-width: $mediumDivice) {
+        width: 30%;
+        font-size: $fontSizeSmall;
+        margin: 5%;
+      }
+
+      @media (min-width: $largeDivice) {
+        width: 22%;
+        font-size: $fontSizeSmall;
+        margin: 5%;
+      }
+    }
+
+    .card-body {
+      h5 {
+        font-weight: 300;
+        @media (min-width: $mediumDivice) {
+          font-size: $fontSizeSmall;
+        }
+      }
+      p {
+        font-weight: 700;
+        @media (min-width: $mediumDivice) {
+          font-size: $fontSizeSmall;
+        }
+      }
+      .price {
+        font-weight: 700;
+        font-size: $fontSizeHigh;
+        @media (min-width: $mediumDivice) {
+          font-size: $fontSizeNormal;
+        }
+      }
+
+      .quantityContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .quantityInfo {
+          width: 30%;
+          font-weight: 700;
+          border: solid 1px $verde;
+          border-radius: 50px;
+          padding: 2%;
+          text-align: center;
+          margin-top: 5%;
+          text-transform: uppercase;
+          @media (min-width: $mediumDivice) {
+            width: 45%;
+            font-size: $fontSizeSmall;
+          }
+        }
+
+        .quantityAddRemoveContainer {
+          width: 30%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border: solid 1px $verde;
+          border-radius: 50px;
+          padding: 2%;
+          margin-top: 5%;
+
+          @media (min-width: $mediumDivice) {
+            width: 45%;
+            font-size: $fontSizeSmall;
+          }
+
+          .removeQuantity,
+          .addQuantity {
+            color: $verde;
+            cursor: pointer;
+            @media (min-width: $mediumDivice) {
+              font-size: $fontSizeSmall;
+            }
+          }
+          .currentQuantityp {
+            font-weight: 700;
+            @media (min-width: $mediumDivice) {
+              font-size: $fontSizeSmall;
+            }
+          }
+        }
+      }
+
+      .buttonAddCart {
+        width: 90%;
+        display: flex;
+        margin: 5% auto;
+        padding: 2% 8% 2% 8%;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        background-color: $verde;
+        border-radius: 50px;
+
+        .addCartIconButton {
+          margin-left: 2%;
+        }
+
+        @media (min-width: $mediumDivice) {
+          width: 100%;
+          font-size: $fontSizeSmall;
+          padding: 2% 5% 2% 5%;
+        }
+
+        @media (min-width: $largeDivice) {
+          width: 100%;
+          font-size: $fontSizeSmall;
+        }
+      }
+    }
+  }
+}

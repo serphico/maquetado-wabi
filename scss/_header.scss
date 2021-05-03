@@ -1,0 +1,226 @@
+@import '_mixin';
+
+header {
+  background-color: white;
+
+  .up-header {
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    @media (min-width: $smallDivice) {
+      height: 13vh;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    .searchContainer {
+      p {
+        @media (min-width: $mediumDivice) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $grisItems;
+          span {
+            color: black;
+          }
+        }
+      }
+    }
+    .logo {
+      width: 20vw;
+      height: 20vh;
+      background: url(../img/logo-min.svg) no-repeat;
+      background-size: contain;
+      @media (min-width: $mediumDivice) {
+        width: 5vw;
+        height: 5vh;
+      }
+    }
+    .customContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      @media (min-width: $mediumDivice) {
+        width: 15vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .content-select select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      /* Eliminamos la fecha que por defecto aparece en el desplegable */
+      .content-select select::-ms-expand {
+        display: none;
+      }
+
+      .content-select {
+        width: 90vw;
+        position: relative;
+        border: none;
+        @media (min-width: $mediumDivice) {
+          width: 4.5rem;
+          position: relative;
+          border: none;
+        }
+      }
+
+      .content-select select {
+        width: 100%;
+        cursor: pointer;
+        background: none;
+        color: black;
+        font-size: 1em;
+        border: none;
+      }
+
+      /* 
+Creamos la flecha que aparece a la izquierda del select.
+Realmente este elemento es un cuadrado que sólo tienen
+dos bordes con color y que giramos con transform: rotate(-45deg);
+*/
+      .content-select i {
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 8px);
+        width: 0.6rem;
+        height: 0.6rem;
+        display: block;
+        border-left: 4px solid $verde;
+        border-bottom: 4px solid $verde;
+        transform: rotate(-45deg); /* Giramos el cuadrado */
+      }
+
+      .iconPerson {
+        font-size: 3rem;
+        @media (min-width: $mediumDivice) {
+          font-size: 2rem;
+        }
+      }
+
+      .cartContainer {
+        width: 90%;
+        height: 4rem;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        @media (min-width: $mediumDivice) {
+          width: 3rem;
+          height: 3rem;
+          position: relative;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: flex-end;
+        }
+
+        .iconCartUpHeader {
+          color: $verde;
+          font-size: 3rem;
+          @media (min-width: $mediumDivice) {
+            font-size: 2rem;
+          }
+        }
+        .cartQuantity {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1.3rem;
+          height: 1.3rem;
+          top: 1rem;
+          left: 8rem;
+          padding: 2%;
+          font-size: 1rem;
+          color: white;
+          background-color: black;
+          border-radius: 50px;
+          @media (min-width: $mediumDivice) {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0.8rem;
+            height: 0.8rem;
+            top: 0.8rem;
+            left: 1.5rem;
+            padding: 2%;
+            font-size: 0.5rem;
+            color: white;
+            background-color: black;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    background-color: $verde;
+
+    @media (min-width: $largeDivice) {
+      height: 10vh;
+    }
+    .material-icons {
+      color: white;
+    }
+
+    div {
+      #navbarNavAltMarkup {
+        .navbar-nav {
+          ul {
+            width: 100vw;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            @media (min-width: $mediumDivice) {
+              flex-direction: row;
+              height: 5vh;
+              justify-content: space-evenly;
+            }
+
+            li {
+              list-style: none;
+              text-align: center;
+
+              a {
+                font-weight: 500;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+
+                @media (min-width: $mediumDivice) {
+                  font-size: $fontSizeSmall !important;
+                }
+              }
+            }
+            .active {
+              a {
+                color: $verde;
+              }
+              background-color: white;
+              border-radius: $radius;
+              border-left: dotted 3px $verde;
+
+              @media (min-width: $mediumDivice) {
+                border-left: dotted 4px $verde;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

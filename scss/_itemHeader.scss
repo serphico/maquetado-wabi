@@ -1,0 +1,56 @@
+@import '_mixin';
+
+.itemHeader {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+
+  @media (min-width: $mediumDivice) {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-size: $fontSizeMedium;
+    font-weight: 700;
+
+    @media (min-width: $largeDivice) {
+      font-size: $fontSizeHigh;
+    }
+    span {
+      width: 11vw;
+      height: 14vh;
+      display: block;
+      border-top: solid 2px #21c063;
+      @media (min-width: $mediumDivice) {
+        width: 2.3rem;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    height: fit-content;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    color: $verde;
+    text-decoration: none;
+    border: solid 1px $verde;
+    border-radius: 50px;
+
+    @media (min-width: $mediumDivice) {
+      width: auto;
+      font-size: $fontSizeSmall;
+      height: auto;
+      padding: 0% 1% 0% 1%;
+    }
+  }
+}

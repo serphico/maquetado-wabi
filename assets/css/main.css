@@ -1,0 +1,545 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+header {
+  background-color: white;
+}
+
+header .up-header {
+  width: 90%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  header .up-header {
+    height: 13vh;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  header .up-header .searchContainer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #616783;
+  }
+  header .up-header .searchContainer p span {
+    color: black;
+  }
+}
+
+header .up-header .logo {
+  width: 20vw;
+  height: 20vh;
+  background: url(../img/logo-min.svg) no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  header .up-header .logo {
+    width: 5vw;
+    height: 5vh;
+  }
+}
+
+header .up-header .customContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* Eliminamos la fecha que por defecto aparece en el desplegable */
+  /* 
+Creamos la flecha que aparece a la izquierda del select.
+Realmente este elemento es un cuadrado que sólo tienen
+dos bordes con color y que giramos con transform: rotate(-45deg);
+*/
+}
+
+@media (min-width: 768px) {
+  header .up-header .customContainer {
+    width: 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+header .up-header .customContainer .content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header .up-header .customContainer .content-select select::-ms-expand {
+  display: none;
+}
+
+header .up-header .customContainer .content-select {
+  width: 90vw;
+  position: relative;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  header .up-header .customContainer .content-select {
+    width: 4.5rem;
+    position: relative;
+    border: none;
+  }
+}
+
+header .up-header .customContainer .content-select select {
+  width: 100%;
+  cursor: pointer;
+  background: none;
+  color: black;
+  font-size: 1em;
+  border: none;
+}
+
+header .up-header .customContainer .content-select i {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 8px);
+  width: 0.6rem;
+  height: 0.6rem;
+  display: block;
+  border-left: 4px solid #21c063;
+  border-bottom: 4px solid #21c063;
+  transform: rotate(-45deg);
+  /* Giramos el cuadrado */
+}
+
+header .up-header .customContainer .iconPerson {
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  header .up-header .customContainer .iconPerson {
+    font-size: 2rem;
+  }
+}
+
+header .up-header .customContainer .cartContainer {
+  width: 90%;
+  height: 4rem;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  header .up-header .customContainer .cartContainer {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+}
+
+header .up-header .customContainer .cartContainer .iconCartUpHeader {
+  color: #21c063;
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  header .up-header .customContainer .cartContainer .iconCartUpHeader {
+    font-size: 2rem;
+  }
+}
+
+header .up-header .customContainer .cartContainer .cartQuantity {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  top: 1rem;
+  left: 8rem;
+  padding: 2%;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  header .up-header .customContainer .cartContainer .cartQuantity {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.8rem;
+    height: 0.8rem;
+    top: 0.8rem;
+    left: 1.5rem;
+    padding: 2%;
+    font-size: 0.5rem;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+  }
+}
+
+header nav {
+  background-color: #21c063;
+}
+
+@media (min-width: 992px) {
+  header nav {
+    height: 10vh;
+  }
+}
+
+header nav .material-icons {
+  color: white;
+}
+
+header nav div #navbarNavAltMarkup .navbar-nav ul {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  header nav div #navbarNavAltMarkup .navbar-nav ul {
+    flex-direction: row;
+    height: 5vh;
+    justify-content: space-evenly;
+  }
+}
+
+header nav div #navbarNavAltMarkup .navbar-nav ul li {
+  list-style: none;
+  text-align: center;
+}
+
+header nav div #navbarNavAltMarkup .navbar-nav ul li a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  header nav div #navbarNavAltMarkup .navbar-nav ul li a {
+    font-size: 12px !important;
+  }
+}
+
+header nav div #navbarNavAltMarkup .navbar-nav ul .active {
+  background-color: white;
+  border-radius: 6px;
+  border-left: dotted 3px #21c063;
+}
+
+header nav div #navbarNavAltMarkup .navbar-nav ul .active a {
+  color: #21c063;
+}
+
+@media (min-width: 768px) {
+  header nav div #navbarNavAltMarkup .navbar-nav ul .active {
+    border-left: dotted 4px #21c063;
+  }
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+main .bannerContainer {
+  width: 100%;
+  height: 11rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url(../img/wabi_mb.png) no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  main .bannerContainer {
+    background: url(../img/wabi.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+.itemHeader {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+@media (min-width: 768px) {
+  .itemHeader {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+.itemHeader h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .itemHeader h2 {
+    font-size: 20px;
+  }
+}
+
+.itemHeader h2 span {
+  width: 11vw;
+  height: 14vh;
+  display: block;
+  border-top: solid 2px #21c063;
+}
+
+@media (min-width: 768px) {
+  .itemHeader h2 span {
+    width: 2.3rem;
+  }
+}
+
+.itemHeader a {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  height: fit-content;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  color: #21c063;
+  text-decoration: none;
+  border: solid 1px #21c063;
+  border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  .itemHeader a {
+    width: auto;
+    font-size: 12px;
+    height: auto;
+    padding: 0% 1% 0% 1%;
+  }
+}
+
+.itemsCard {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .itemsCard {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.itemsCard .card {
+  margin: 1rem auto;
+  padding: 1rem;
+  box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card {
+    width: 23%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.itemsCard .card small {
+  width: 21%;
+  text-align: center;
+  font-size: 16px;
+  background-color: #f4f4f4;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card small {
+    width: 30%;
+    font-size: 12px;
+    margin: 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .itemsCard .card small {
+    width: 22%;
+    font-size: 12px;
+    margin: 5%;
+  }
+}
+
+.itemsCard .card .card-body h5 {
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body h5 {
+    font-size: 12px;
+  }
+}
+
+.itemsCard .card .card-body p {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body p {
+    font-size: 12px;
+  }
+}
+
+.itemsCard .card .card-body .price {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body .price {
+    font-size: 14px;
+  }
+}
+
+.itemsCard .card .card-body .quantityContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemsCard .card .card-body .quantityContainer .quantityInfo {
+  width: 30%;
+  font-weight: 700;
+  border: solid 1px #21c063;
+  border-radius: 50px;
+  padding: 2%;
+  text-align: center;
+  margin-top: 5%;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body .quantityContainer .quantityInfo {
+    width: 45%;
+    font-size: 12px;
+  }
+}
+
+.itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px #21c063;
+  border-radius: 50px;
+  padding: 2%;
+  margin-top: 5%;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer {
+    width: 45%;
+    font-size: 12px;
+  }
+}
+
+.itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer .removeQuantity,
+.itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer .addQuantity {
+  color: #21c063;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer .removeQuantity,
+  .itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer .addQuantity {
+    font-size: 12px;
+  }
+}
+
+.itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer .currentQuantityp {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body .quantityContainer .quantityAddRemoveContainer .currentQuantityp {
+    font-size: 12px;
+  }
+}
+
+.itemsCard .card .card-body .buttonAddCart {
+  width: 90%;
+  display: flex;
+  margin: 5% auto;
+  padding: 2% 8% 2% 8%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  background-color: #21c063;
+  border-radius: 50px;
+}
+
+.itemsCard .card .card-body .buttonAddCart .addCartIconButton {
+  margin-left: 2%;
+}
+
+@media (min-width: 768px) {
+  .itemsCard .card .card-body .buttonAddCart {
+    width: 100%;
+    font-size: 12px;
+    padding: 2% 5% 2% 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .itemsCard .card .card-body .buttonAddCart {
+    width: 100%;
+    font-size: 12px;
+  }
+}
