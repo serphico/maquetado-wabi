@@ -10,6 +10,12 @@ main {
     background-size: contain;
 
     @media (min-width: $mediumDivice) {
+      height: 14.3rem;
+      background: url(../img/wabi.png) no-repeat;
+      background-size: contain;
+    }
+    @media (min-width: $largeDivice) {
+      height: 23rem;
       background: url(../img/wabi.png) no-repeat;
       background-size: contain;
     }

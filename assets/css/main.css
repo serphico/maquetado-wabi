@@ -287,6 +287,15 @@ main .bannerContainer {
 
 @media (min-width: 768px) {
   main .bannerContainer {
+    height: 14.3rem;
+    background: url(../img/wabi.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 992px) {
+  main .bannerContainer {
+    height: 23rem;
     background: url(../img/wabi.png) no-repeat;
     background-size: contain;
   }
